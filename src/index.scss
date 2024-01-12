@@ -1,0 +1,25 @@
+@font-face {
+  font-family: 'Graphik';
+  src: url('/public/GrafikFont/Graphik-Black-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-BlackItalic-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-Bold-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-BoldItalic-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-Extralight-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-ExtralightItalic-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-Light-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-LightItalic-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-Medium-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-MediumItalic-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-Regular-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-RegularItalic-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-Semibold-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-SemiboldItalic-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-Super-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-SuperItalic-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-Thin-Trial.woff') format(woff),
+       url('/public/GrafikFont/Graphik-ThinItalic-Trial.woff') format(woff);
+}
+
+body{
+  font-family: 'Graphik', sans-serif;
+}
