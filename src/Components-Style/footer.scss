@@ -1,0 +1,71 @@
+$primary-color: #f1f8fc;
+$secondary-color: #0074c7;
+$third-color: #00497c;
+$fourth-color: #384050;
+$fifth-color: #cd2c2e;
+$sixth-color: #82b864;
+
+footer{
+        background-color: $secondary-color;
+        padding-bottom: 20px;
+
+        img{
+                width: 200px;
+                filter: brightness(10);
+        }
+        .props__ville{
+                color: $primary-color;
+                font-weight: bold;
+                font-size: 1.5em;
+                width: 100%;
+        }
+        .information__location{
+                margin-left: 100px;
+                margin-right: 100px;
+        }
+        .location__adress{
+                display: flex;
+                gap: 15px;
+                margin-left: 15px;
+        }
+        .location__number{
+                display: flex;
+                gap: 15px;
+        }
+        address{
+                color: $primary-color;
+        }
+        .footer__icon{
+                color: $primary-color;
+                font-size: 1.5em;
+        }
+        a{
+                text-decoration: none;
+                color: $primary-color;
+        }
+        .localisation{
+                display: flex;
+                justify-content: space-between;
+        }
+        .footer__separateur{
+                display: flex;
+                justify-content: center;
+        }
+        .footer__separateur hr{
+                border: solid #ffffff 1px;
+                width: 80%;
+        }
+        .mention{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 25px;
+                width: 100%;
+        }
+        .mention a:active,
+        a:focus,
+        a:hover {
+                color: $third-color;
+                font-weight: bold;
+        }
+}
