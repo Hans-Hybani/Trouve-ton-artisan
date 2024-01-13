@@ -62,10 +62,13 @@ footer{
                 gap: 25px;
                 width: 100%;
         }
-        .mention a:active,
-        a:focus,
-        a:hover {
-                color: $third-color;
+        .footer__mention{
+                color: $primary-color;
+        }
+        .footer__mention:active,
+        .footer__mention:focus,
+        .footer__mention:hover {
+                color: $fourth-color;
                 font-weight: bold;
         }
 }

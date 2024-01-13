@@ -3,11 +3,8 @@ import Logo from "../Assets/Logo.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faPhone } from '@fortawesome/free-solid-svg-icons'
-
-// import {faLocationDot} from '@fortawesome/free-solid-svg-icons'
-// import { faSearchengin } from '@fortawesome/free-brands-svg-icons';
-// import { faFileCode} from '@fortawesome/free-solid-svg-icons';
-
+import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
 
 function Footer(params) {
         const FooterData = (props) => {
@@ -17,7 +14,7 @@ function Footer(params) {
                   </div>
                 );
         };
-
+                
         return(
                 <footer>
                         <div>
@@ -47,10 +44,10 @@ function Footer(params) {
                                 <hr/>
                         </div>
                         <div className='mention'>
-                                <a href='/'>Mentions légales</a>
-                                <a href='/'>Données personnelles</a>
-                                <a href='/'>Accessibilité</a>
-                                <a href='/'>Gestion des cookies</a>
+                                <Nav.Link as={Link} to="/Categrorys" className="footer__mention">Mentions légales</Nav.Link>
+                                <Nav.Link as={Link} to="/Categrorys" className="footer__mention">Données personnelles</Nav.Link>
+                                <Nav.Link as={Link} to="/Categrorys" className="footer__mention">Accessibilité</Nav.Link>
+                                <Nav.Link as={Link} to="/Categrorys" className="footer__mention">Alimentation</Nav.Link>
                         </div>
                 </footer>
         )
