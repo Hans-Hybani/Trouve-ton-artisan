@@ -1,6 +1,6 @@
-import React,{useEffect, useState} from "react";
+import React from "react";
 
-function Sheets(params) {
+function Cookie(params) {
         return(
                 <section>
                         
@@ -8,4 +8,4 @@ function Sheets(params) {
         )
 }
 
-export default Sheets;
+export default Cookie;

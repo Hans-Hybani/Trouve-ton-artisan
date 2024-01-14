@@ -27,10 +27,10 @@ function Header() {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link as={Link} to="/Categrorys" className="nav__list ">Bâtiment</Nav.Link>
-                  <Nav.Link as={Link} to="/Categrorys" className="nav__list ">Services</Nav.Link>
-                  <Nav.Link as={Link} to="/Categrorys" className="nav__list">Fabrication</Nav.Link>
-                  <Nav.Link as={Link} to="/Categrorys" className="nav__list">Alimentation</Nav.Link>
+                  <Nav.Link as={Link} to="/Batiment" className="nav__list ">Bâtiment</Nav.Link>
+                  <Nav.Link as={Link} to="/Service" className="nav__list ">Services</Nav.Link>
+                  <Nav.Link as={Link} to="/Fabrication" className="nav__list">Fabrication</Nav.Link>
+                  <Nav.Link as={Link} to="/Alimentation" className="nav__list">Alimentation</Nav.Link>
                 </Nav>
                 <Form className="search">
                   <Form.Control

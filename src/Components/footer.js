@@ -28,15 +28,15 @@ function Footer(params) {
                                         <div className='location__adress'>
                                                 <FontAwesomeIcon icon={faLocationDot} className='footer__icon'/>
                                                 <address>
-                                                        <a href='/'>101 cours Charlemagne<br/>
+                                                        <Nav.Link href='https://maps.app.goo.gl/Aqr2yniq5tEvbwYM6' target='_blank' className='adresse'>101 cours Charlemagne<br/>
                                                         CS 20033<br/>
                                                         69269 LYON CEDEX 02<br/>
-                                                        France</a>
+                                                        France</Nav.Link>
                                                 </address>
                                         </div>
                                         <div className='location__number'>
                                                 <FontAwesomeIcon icon={faPhone} className='footer__icon' />
-                                                <a href="tel:0426734000">+33 (0)4 26 73 40 00</a>
+                                                <Nav.Link href="tel:+330426734000" target='_blank' className='number'>+33 (0)4 26 73 40 00</Nav.Link>
                                         </div>
                                 </div>
                         </div>
@@ -44,10 +44,10 @@ function Footer(params) {
                                 <hr/>
                         </div>
                         <div className='mention'>
-                                <Nav.Link as={Link} to="/Categrorys" className="footer__mention">Mentions légales</Nav.Link>
-                                <Nav.Link as={Link} to="/Categrorys" className="footer__mention">Données personnelles</Nav.Link>
-                                <Nav.Link as={Link} to="/Categrorys" className="footer__mention">Accessibilité</Nav.Link>
-                                <Nav.Link as={Link} to="/Categrorys" className="footer__mention">Alimentation</Nav.Link>
+                                <Nav.Link as={Link} to="/MentionLegale" className="footer__mention">Mentions légales</Nav.Link>
+                                <Nav.Link as={Link} to="/DonnePersonnelle" className="footer__mention">Données personnelles</Nav.Link>
+                                <Nav.Link as={Link} to="/Accessibility" className="footer__mention">Accessibilité</Nav.Link>
+                                <Nav.Link as={Link} to="/Cookie" className="footer__mention">Gestion des cookies</Nav.Link>
                         </div>
                 </footer>
         )

@@ -1,7 +1,5 @@
 import React,{useEffect, useState} from "react";
-import '../Pages-Style/home.scss'
 import data from '../data.json'
-
 import '../Components-Style/cards.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
@@ -9,9 +7,8 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 
+function Alimentation(params) {
 
-function Home(params) {
-        
         //A commenter
         const [artisans, setArtisans] = useState([]);
                 useEffect(() => {
@@ -19,15 +16,22 @@ function Home(params) {
                 setArtisans(data); // Le tableau vide signifie que useEffect ne s'exécute qu'une fois après le montage du composant
         }, []);
 
-        // A commenter
-        const topArtisans = artisans.sort((a, b) => parseFloat(b.note) - parseFloat(a.note)).slice(0, 3);
-        
+        let category = [];
+
+        for (let i = 0; i < artisans.length; i++) {
+        const artisan = artisans[i];
+
+        if (artisan.category === "Alimentation") {
+                category.push(artisan)
+        }       
+        }
+
         return(
                 <section>
-                        <h2>Artisans du mois</h2>
+                        <h2>Nos artisan dans le batiment</h2>
                         <div className="card__artisan__box">
                                 {/* A commenter */}
-                                {topArtisans.map((artisan) => (
+                                {category.map((artisan) => (
                                 <div className="card__artisan">
                                         <p className="name__artisan">{artisan.name}</p>
                                         <div className="speciality__artisan artisan">
@@ -48,4 +52,4 @@ function Home(params) {
         )
 }
 
-export default Home;
+export default Alimentation;

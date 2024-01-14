@@ -1,11 +1,10 @@
 import React from "react";
 
-function Categrorys(params) {
+function Accessibility(params) {
         return(
                 <section>
-                        
                 </section>
         )
 }
 
-export default Categrorys;
+export default Accessibility;

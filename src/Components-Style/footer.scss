@@ -32,16 +32,18 @@ footer{
                 display: flex;
                 gap: 15px;
         }
+        .number{
+                color: $primary-color;
+        }
         address{
                 color: $primary-color;
+        }
+        address:hover{
+                color: $fourth-color;
         }
         .footer__icon{
                 color: $primary-color;
                 font-size: 1.5em;
-        }
-        a{
-                text-decoration: none;
-                color: $primary-color;
         }
         .localisation{
                 display: flex;
