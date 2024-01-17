@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from "react-router-dom";
+
 
 function Service(params) {
 
@@ -24,6 +26,24 @@ function Service(params) {
                 category.push(artisan)
         }       
         }
+        const navigate = useNavigate();
+
+        const handleCardClick = (selectedArtisan ) => {
+                const { name, specialty, location, website, note } = selectedArtisan ;
+                // Redirigez vers la page "/sheets" lorsqu'une carte est cliquée
+                
+                navigate('/sheets', {
+                        state: {
+                           selectedArtisan : {
+                                name,
+                                specialty,
+                                location,
+                                website,
+                                note
+                            }
+                        }
+                });    
+        }
 
         return(
                 <section>
@@ -31,11 +51,12 @@ function Service(params) {
                         <div className="card__artisan__box">
                                 {/* A commenter */}
                                 {category.map((artisan) => (
-                                <div className="card__artisan">
+                                <div className="card__artisan" key={artisan.id} onClick={() => handleCardClick(artisan)}>
                                         <p className="name__artisan">{artisan.name}</p>
                                         <div className="speciality__artisan artisan">
                                                 <FontAwesomeIcon icon={faScrewdriverWrench} className="icon__cards"/>
-                                                <p className="speciality__name data__artian">{artisan.specialty}</p>                                                                                                </div>
+                                                <p className="speciality__name data__artian">{artisan.specialty}</p>                                                                                                
+                                        </div>
                                         <div className="localisation__artisan artisan">
                                                 <FontAwesomeIcon icon={faLocationDot} className="icon__cards"/>
                                                 <p className="localisation__name data__artian">{artisan.location}</p>                                                

@@ -1,0 +1,43 @@
+$primary-color: #f1f8fc;
+$secondary-color: #0074c7;
+$third-color: #00497c;
+$fourth-color: #384050;
+$fifth-color: #cd2c2e;
+$sixth-color: #82b864;
+
+h2{
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+        color: $secondary-color;
+        font-weight: 600;
+}
+.apropos__txt{
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        font-size:larger;
+}
+.artisan__web{
+        font-size:large;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        padding-bottom: 20px;
+}
+.contact__fomulaire h2{
+        width: 100%;
+        padding-bottom: 10px;
+}
+.contact__fomulaire{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
+}
+.fomulaire{
+        width: 600px;
+        padding-bottom: 30px;
+}

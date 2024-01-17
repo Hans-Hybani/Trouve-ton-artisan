@@ -12,6 +12,7 @@ import Accessibility from './Mention/accessibility'
 import Cookie from './Mention/cookie'
 import MentionLegale from './Mention/legale'
 import DonnePersonnelle from './Mention/personelle'
+import SearchArti from './Pages/search';
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/MentionLegale" element={<MentionLegale/>}/>
           <Route path="/DonnePersonnelle" element={<DonnePersonnelle/>}/>
           <Route path="/Error404" element={<Error404/>}/>
+          <Route path="/Search" element={<SearchArti/>}/>
         </Routes>
       <Footer/>
     </div>
