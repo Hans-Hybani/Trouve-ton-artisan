@@ -6,6 +6,8 @@ import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
 
 function SearchArti(params) {
 
@@ -42,11 +44,30 @@ function SearchArti(params) {
           }
         }
 
+        const navigate = useNavigate();
+
+        const handleCardClick = (selectedArtisan ) => {
+          const { name, specialty, location, website, note } = selectedArtisan ;
+          // Redirigez vers la page "/sheets" lorsqu'une carte est cliquée
+          
+          navigate('/sheets', {
+                  state: {
+                     selectedArtisan : {
+                          name,
+                          specialty,
+                          location,
+                          website,
+                          note
+                      }
+                  }
+          });    
+  }
+
   return (
     <div className="card__artisan__box">
     {/* A commenter */}
     {selected.map((artisan) => (
-    <div className="card__artisan" key={artisan.id}>
+    <div className="card__artisan" key={artisan.id} onClick={() => handleCardClick(artisan)}>
             <p className="name__artisan">{artisan.name}</p>
             <div className="speciality__artisan artisan">
                     <FontAwesomeIcon icon={faScrewdriverWrench} className="icon__cards"/>

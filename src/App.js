@@ -30,8 +30,8 @@ function App() {
           <Route path="/Cookie" element={<Cookie/>}/>
           <Route path="/MentionLegale" element={<MentionLegale/>}/>
           <Route path="/DonnePersonnelle" element={<DonnePersonnelle/>}/>
-          <Route path="/Error404" element={<Error404/>}/>
           <Route path="/Search" element={<SearchArti/>}/>
+          <Route path="*" element={<Error404/>}/>
         </Routes>
       <Footer/>
     </div>

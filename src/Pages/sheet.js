@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef,useEffect} from "react";
 import '../Components-Style/cards.scss'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
@@ -10,9 +10,15 @@ import Nav from 'react-bootstrap/Nav';
 import { useLocation } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import emailjs from '@emailjs/browser';
+import { Overlay } from "react-bootstrap";
 
 function Sheets(params) {
+        const form = useRef()
 
+        const location = useLocation();
+
+        const selectedArtisan = location.state?.selectedArtisan;
+        
         const sendEmail = (e) => {
                 e.preventDefault();
             
@@ -25,14 +31,27 @@ function Sheets(params) {
                   e.target.reset()
               };
 
-        const form = useRef()
-
-        const location = useLocation();
-
-        const selectedArtisan = location.state?.selectedArtisan;
+        //       useEffect(() => {
+        //         let modale = document.getElementById('modale__mail');
+        //         modale.style.display = "none";
+        //         let overlay = document.getElementById('overlay')
+        //         overlay.style.display="block"
+        //       }, []);
 
         return(
                 <div>
+                        <div id="overlay"></div>
+                        <div id="modale__mail">
+                                <div class="modale__mail__confirmation__titre">
+                                        <h2>Votre Message a été envoyer</h2>
+                                </div>
+                                <div>
+                                        <p></p>
+                                </div>
+                                <div class="modale__mail__button">
+                                        <button type="button">Fermer</button>
+                                </div>
+                        </div>
                         <div className="card__artisan__box">
                                 {/* A commenter */}
                                 <div className="card__artisan">
@@ -66,7 +85,7 @@ function Sheets(params) {
 
                         <div className="contact__fomulaire">
                                 <h2>Contactez cette Artisan</h2>
-                                        <Form ref={form} onSubmit={sendEmail} className="fomulaire">
+                                        <Form ref={form} /*onSubmit={sendEmail}*/ className="fomulaire">
                                                 <Form.Group className="mb-3" controlId="nom">
                                                         <Form.Control type="input" name='user_name' placeholder="Votre nom" />
                                                 </Form.Group>
@@ -76,7 +95,7 @@ function Sheets(params) {
                                                 <Form.Group className="mb-3" controlId="textArea">
                                                         <Form.Control as="textarea" name='message' rows={3} />
                                                 </Form.Group>
-                                                <Button variant="primary" type="submit">Valider</Button>{' '}
+                                                <Button variant="primary" type="submit">Valider</Button>
                                         </Form>
                         </div>
                 </div>

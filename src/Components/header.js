@@ -162,16 +162,11 @@ function Header() {
   };
 
   const submit = () => {
-    console.log("userInput:", userInput);
-
     for (let i = 0; i < artisans.length; i++) {
       const parcour = artisans[i];
       const { name, location, category,note } = parcour;
 
-      console.log("parcour:", parcour);
-
       if (userInput === name || userInput === location || userInput === category ) {
-        console.log("Match trouvé:", name);
         navigate("/Search", {
           state: {
             selectedArtisan: {
@@ -182,11 +177,8 @@ function Header() {
             }
           },
         });
-        return; // Terminer la fonction après avoir trouvé une correspondance
       }
     }
-
-    console.log("Aucun match trouvé");
   };
 
   return (

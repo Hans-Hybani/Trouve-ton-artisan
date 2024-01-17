@@ -41,3 +41,12 @@ h2{
         width: 600px;
         padding-bottom: 30px;
 }
+#overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #0000007a;
+        display: none;
+}
