@@ -27,17 +27,17 @@ function SearchArti(params) {
           const artisan = artisans[i];
         
           const name = artisan.name;
-          const category = artisan.category;
+          const specialty = artisan.specialty;
           const location = artisan.location;
 
           const searchTermName = selectedArtisan.name;
-          const searchTermCategory = selectedArtisan.category;
+          const searchTermspecialty = selectedArtisan.specialty;
           const searchTermLocation = selectedArtisan.location;
         
           // Vérifier si au moins une propriété correspond
           if (name.includes(searchTermName)) {
             selected.push(artisan);
-          }else if (category.includes(searchTermCategory)) {
+          }else if (specialty.includes(searchTermspecialty)) {
             selected.push(artisan);
           }else if(location.includes(searchTermLocation)){
             selected.push(artisan);

@@ -27,15 +27,15 @@ function Header() {
   const submit = () => {
     for (let i = 0; i < artisans.length; i++) {
       const parcour = artisans[i];
-      const { name, location, category,note } = parcour;
+      const { name, specialty, location,note } = parcour;
 
-      if (userInput === name || userInput === location || userInput === category ) {
+      if (userInput === name || userInput === specialty || userInput === location ) {
         navigate("/Search", {
           state: {
             selectedArtisan: {
               name,
+              specialty,
               location,
-              category,
               note
             }
           },
