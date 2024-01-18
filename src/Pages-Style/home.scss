@@ -13,5 +13,34 @@ section{
                 color: $fourth-color;
                 font-weight: 600;
         }
-        
+        .step__find__artisan{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+                padding: 20px;
+                .step{
+                        padding:10px;
+                        width: 500px;
+                        text-align: center;
+                        border: solid 3px $fourth-color;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        p{
+                                padding-top: 10px;
+                        }
+                }
+                .step__one img{
+                        width: 650px;
+                }
+                .step__three img{
+                        width: 500px;
+                }
+
+                
+        } 
+        .step__find__artisan img{
+                width: 400px;
+        }
 }

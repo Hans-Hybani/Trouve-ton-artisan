@@ -17,7 +17,7 @@ function SearchArti(params) {
         //A commenter
         const [artisans, setArtisans] = useState([]);
                 useEffect(() => {
-                // Chargez les données depuis le fichier JSON ici
+                // Chargez les données depuis le fichier JSON
                 setArtisans(data); // Le tableau vide signifie que useEffect ne s'exécute qu'une fois après le montage du composant
         }, []);
 

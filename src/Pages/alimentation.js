@@ -9,11 +9,10 @@ import { useNavigate } from "react-router-dom";
 
 
 function Alimentation() {
-        //A commenter
+        
         const [artisans, setArtisans] = useState([]);
                 useEffect(() => {
-                // Chargez les données depuis le fichier JSON ici
-                setArtisans(data); // Le tableau vide signifie que useEffect ne s'exécute qu'une fois après le montage du composant
+                setArtisans(data);
         }, []);
 
         let category = [];

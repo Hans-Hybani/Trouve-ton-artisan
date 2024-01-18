@@ -4,11 +4,10 @@ import '../Pages-Style/404.scss'
 
 function Error404(params) {
         return(
-                <section>
-                        
+                <div className="ErrorPage">
                         <img src={erreurs404} alt="Logo du site" />
                         <p className="error">404</p>
-                </section>
+                </div>
         )
 }
 

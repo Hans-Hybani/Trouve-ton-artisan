@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import {useRef} from "react";
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -11,11 +10,9 @@ function Buton({ onSendEmail }) {
   const handleShow = () => setShow(true);
 
   const handleYesClick = (e) => {
-    // Appeler la fonction onSendEmail du parent
     if (onSendEmail) {
       onSendEmail(e);
     }
-    // Fermer le modal
     handleClose();
   };
 
