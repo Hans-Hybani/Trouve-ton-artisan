@@ -27,7 +27,7 @@ function Buton({ onSendEmail }) {
           <Modal.Title>Message de confirmation</Modal.Title>
         </Modal.Header>
         <Modal.Body>Merci d'avoir fait le choix de cette artisan.<br/>
-         En valider voitre choix <strong>Une réponse sera apportée sous 48h.</strong><br/>
+         En validant voitre choix <strong>Une réponse sera apportée sous 48h.</strong><br/>
          <span className='green'>Oui, pour valider.</span><br/>
          <span className='red'>Non, pour faire un autre choix</span>
         </Modal.Body>
