@@ -1,0 +1,41 @@
+$primary-color: #f1f8fc;
+$secondary-color: #0074c7;
+$third-color: #00497c;
+$fourth-color: #384050;
+$fifth-color: #cd2c2e;
+$sixth-color: #82b864;
+
+header{
+        background-color:$primary-color;
+
+        img{
+                width: 200px;
+        }
+        .nav__list{
+                color: $fourth-color;
+                font-weight:normal;
+        }
+        .nav__list:active,
+        .nav__list:focus,
+        .nav__list:hover {
+                color: $secondary-color;
+                font-weight: bold;
+        }
+        .search{
+                display: flex;
+        }
+        .search ::placeholder{
+                font-style: italic;
+                color: #0000003a;
+        }
+        .bouton{
+                color: $secondary-color;
+                border: #0074c7 solid 1px;
+        }
+        .bouton:hover{
+                background-color: #0074c7;
+                color: #ffff;
+                border: #0074c7 solid 1px;
+        }
+       
+}

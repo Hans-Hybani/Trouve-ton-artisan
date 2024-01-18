@@ -1,0 +1,45 @@
+$primary-color: #f1f8fc;
+$secondary-color: #0074c7;
+$third-color: #00497c;
+$fourth-color: #384050;
+$fifth-color: #cd2c2e;
+$sixth-color: #82b864;
+
+section{
+        h2{
+                display: flex;
+                justify-content: center;
+                margin-top: 30px;
+                color: $fourth-color;
+                font-weight: 600;
+        }
+        .step__find__artisan{
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 15px;
+                margin-top: 20px;
+                padding: 20px;
+                .step{
+                        padding:10px;
+                        width: 500px;
+                        text-align: center;
+                        border: solid 3px $fourth-color;
+                        border-radius: 5px;
+                        overflow: hidden;
+                        p{
+                                padding-top: 10px;
+                        }
+                }
+                .step__one img{
+                        width: 650px;
+                }
+                .step__three img{
+                        width: 500px;
+                }
+                
+        } 
+        .step__find__artisan img{
+                width: 400px;
+        }
+}
