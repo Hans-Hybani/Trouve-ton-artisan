@@ -61,7 +61,7 @@ function Sheets(params) {
 
                         <h2>Mon site</h2>
                         <div className="artisan__web">
-                                <Nav.Link href={selectedArtisan?.website} target="_blank" >{selectedArtisan.website}</Nav.Link>
+                                <Nav.Link href={selectedArtisan?.website} target="_blank" rel="noopener noreferrer">{selectedArtisan.website}</Nav.Link>
                         </div>
 
                         <div className="contact__fomulaire">
