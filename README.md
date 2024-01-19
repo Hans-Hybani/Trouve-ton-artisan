@@ -17,8 +17,8 @@ A. Si vous avez téléchargé ce projet :
 
 B. Si vous êtes à l'aise avec GitHub :
 
-Clonez le projet depuis https://github.com/Hans-Hybani/Trouve-ton-artisan.
-Suivez les étapes 5 et 6 ci-dessus.
+1. Clonez le projet depuis https://github.com/Hans-Hybani/Trouve-ton-artisan.
+2. Suivez les étapes 5 et 6 ci-dessus.
 
 # Getting Started with Create React App
 
