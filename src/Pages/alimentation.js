@@ -6,7 +6,7 @@ import { faScrewdriverWrench } from '@fortawesome/free-solid-svg-icons'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
 import { useNavigate } from "react-router-dom";
-
+import StarRating from "../Components/stars";
 
 function Alimentation() {
         
@@ -17,20 +17,22 @@ function Alimentation() {
 
         let category = [];
 
+        // Utilisation d'une boucle for pour filtrer les artisans par catégorie
         for (let i = 0; i < artisans.length; i++) {
-        const artisan = artisans[i];
+                const artisan = artisans[i];
 
         if (artisan.category === "Alimentation") {
                 category.push(artisan)
-        }       
+                }       
         }
         
         const navigate = useNavigate();
 
+        // Définition de la fonction "handleCardClick" pour gérer le clic sur une carte d'artisan
         const handleCardClick = (selectedArtisan ) => {
                 const { name, specialty, location, website, note } = selectedArtisan ;
-                // Redirigez vers la page "/sheets" lorsqu'une carte est cliquée
                 
+                // Redirigez vers la page "/sheets" lorsqu'une carte est cliquée
                 navigate('/sheets', {
                         state: {
                            selectedArtisan : {
@@ -48,7 +50,7 @@ function Alimentation() {
                 <section>
                         <h2>Nos artisan dans le batiment</h2>
                         <div className="card__artisan__box">
-                                {/* A commenter */}
+                                {/* Utilisation de la méthode map pour créer une carte pour chaque artisan dans la catégorie */}
                                 {category.map((artisan) => (
                                 <div className="card__artisan" key={artisan.id} onClick={() => handleCardClick(artisan)}>
                                         <p className="name__artisan">{artisan.name}</p>
@@ -63,6 +65,7 @@ function Alimentation() {
                                         <div className="note__artisan artisan">
                                                 <FontAwesomeIcon icon={faStar} className="icon__cards star"/>
                                                 <p className="note__name data__artian">{artisan.note}/5</p>
+                                                <StarRating rating={artisan.note} />
                                         </div>
                                 </div>
                                 ))}

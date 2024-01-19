@@ -10,31 +10,30 @@ import Nav from 'react-bootstrap/Nav';
 import { useLocation } from "react-router-dom";
 import emailjs from '@emailjs/browser';
 import Buton from "../Components/button";
+import StarRating from "../Components/stars";
 
 function Sheets(params) {
-
+        
         const sendEmail = (e) => {
                 e.preventDefault();
-            
-                emailjs.sendForm('service_sjxjuxt', 'template_19dqh98', form.current, 'Igbi6Gu2-dn5NmWMt')
-                  .then((result) => {
-                      console.log(result.text);
-                  }, (error) => {
-                      console.log(error.text);
-                  });
-                  form.current.reset();
-              };
 
+                emailjs.sendForm('service_sjxjuxt', 'template_19dqh98', form.current, 'Igbi6Gu2-dn5NmWMt')
+                        // Réinitialisation du formulaire après l'envoi
+                        form.current.reset();
+                };
+
+        // Utilisation du hook useRef pour créer une référence au formulaire
         const form = useRef()
 
+        // Utilisation du hook useLocation pour accéder aux informations de l'emplacement (URL)
         const location = useLocation();
 
+        // Extraction des données du composant parent  via location.state
         const selectedArtisan = location.state?.selectedArtisan;
 
         return(
                 <div>
                         <div className="card__artisan__box">
-                                {/* A commenter */}
                                 <div className="card__artisan">
                                         <p className="name__artisan">{selectedArtisan.name}</p>
                                         <div className="speciality__artisan artisan">
@@ -48,6 +47,7 @@ function Sheets(params) {
                                         <div className="note__artisan artisan">
                                                 <FontAwesomeIcon icon={faStar} className="icon__cards star"/>
                                                 <p className="note__name data__artian">{selectedArtisan.note}/5</p>
+                                                <StarRating rating={selectedArtisan.note} />
                                         </div>
                                 </div>
                         </div>
