@@ -12,6 +12,7 @@ import { useNavigate } from "react-router-dom";
 import data from '../data.json'
 
 function Header() {
+
   const [artisans, setArtisans] = useState([]);
   const [userInput, setUserInput] = useState("");
   const navigate = useNavigate();
@@ -20,6 +21,7 @@ function Header() {
     setArtisans(data);
   }, []);
 
+  // Gestion du changement dans l'input de recherche
   const handleChange = (e) => {
     setUserInput(e.target.value);
   };
@@ -27,12 +29,16 @@ function Header() {
   const submit = () => {
     for (let i = 0; i < artisans.length; i++) {
       const parcour = artisans[i];
-      const { name, specialty, location,note } = parcour;
+      
+      //le tableau artisan a plusieurs éléments, nous on a besoin que de ceux là
+      const { name, specialty, location, note } = parcour;
 
+      // Ici onvérifie si ce que l'utilisateur a entrer correspond à un élément de ces trois category 
+      // Exemple si l'utilisaateur entre le nom d'une ville...(location)
       if (userInput === name || userInput === specialty || userInput === location ) {
         navigate("/Search", {
           state: {
-            selectedArtisan: {
+            parcour: {
               name,
               specialty,
               location,

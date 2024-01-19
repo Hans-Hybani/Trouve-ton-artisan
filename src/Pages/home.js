@@ -11,27 +11,26 @@ import artisan from '../Assets/artisan.PNG'
 import categorie from '../Assets/categorie.PNG'
 import formulaire from '../Assets/formulaire.PNG'
 import message from '../Assets/message.PNG'
-
+import StarRating from "../Components/stars";
 
 
 function Home(params) {
         
-        //A commenter
         const [artisans, setArtisans] = useState([]);
                 useEffect(() => {
-                // Chargez les données depuis le fichier JSON
-                setArtisans(data); // Le tableau vide signifie que useEffect ne s'exécute qu'une fois après le montage du composant
+                setArtisans(data);
         }, []);
 
-        // A commenter
+        // Utilisation de la méthode sort pour trier les artisans par note de manière décroissante, puis slice pour obtenir les 3 premiers
         const topArtisans = artisans.sort((a, b) => parseFloat(b.note) - parseFloat(a.note)).slice(0, 3);
         
         const navigate = useNavigate();
 
+        // Définition de la fonction "handleCardClick" pour gérer le clic sur une carte d'artisan
         const handleCardClick = (selectedArtisan ) => {
                 const { name, specialty, location, website, note } = selectedArtisan;
+
                 // Redirigez vers la page "/sheets" lorsqu'une carte est cliquée
-                
                 navigate('/sheets', {
                         state: {
                             selectedArtisan: {
@@ -42,14 +41,14 @@ function Home(params) {
                                 note
                             }
                         }
-                });
-                
+                }); 
         }
 
         return(
                 <div>
                         <section>
-                                <h2>Trouve ton artisan</h2>
+                                <h2>Comment trouver mon artisan ?</h2>
+                                
                                 <div className="step__find__artisan">
                                         <div className="step__one step">
                                                 <h3>Etape 1</h3>
@@ -76,7 +75,7 @@ function Home(params) {
                         <section>
                                 <h2>Artisans du mois</h2>
                                 <div className="card__artisan__box">
-                                        {/* A commenter */}
+                                         {/* Utilisation de la méthode map pour créer une carte pour chaque artisan dans le tableau 'topArtisans' */}
                                         {topArtisans.map((artisan) => (
                                         <div className="card__artisan" key={artisan.id} onClick={() => handleCardClick(artisan)}>
                                                 <p className="name__artisan">{artisan.name}</p>
@@ -91,6 +90,7 @@ function Home(params) {
                                                 <div className="note__artisan artisan">
                                                         <FontAwesomeIcon icon={faStar} className="icon__cards star"/>
                                                         <p className="note__name data__artian">{artisan.note}/5</p>
+                                                        <StarRating rating={artisan.note} />
                                                 </div>
                                         </div>
                                         ))}

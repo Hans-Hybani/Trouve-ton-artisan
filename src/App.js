@@ -18,21 +18,23 @@ function App() {
   return (
     <div>
       <Header/>
+      <main>
         <Routes>
-          <Route index element={<Home/>}/>
-          <Route path="/Home" element={<Home/>}/>
-          <Route path="/Sheets" element={<Sheets/>}/>
-          <Route path="/Batiment" element={<Batiment/>}/>
-          <Route path="/Service" element={<Service/>}/>
-          <Route path="/Fabrication" element={<Fabrication/>}/>
-          <Route path="/Alimentation" element={<Alimentation/>}/>
-          <Route path="/Accessibility" element={<Accessibility/>}/>
-          <Route path="/Cookie" element={<Cookie/>}/>
-          <Route path="/MentionLegale" element={<MentionLegale/>}/>
-          <Route path="/DonnePersonnelle" element={<DonnePersonnelle/>}/>
-          <Route path="/Search" element={<SearchArti/>}/>
-          <Route path="*" element={<Error404/>}/>
-        </Routes>
+            <Route index element={<Home/>}/>
+            <Route path="/Home" element={<Home/>}/>
+            <Route path="/Sheets" element={<Sheets/>}/>
+            <Route path="/Batiment" element={<Batiment/>}/>
+            <Route path="/Service" element={<Service/>}/>
+            <Route path="/Fabrication" element={<Fabrication/>}/>
+            <Route path="/Alimentation" element={<Alimentation/>}/>
+            <Route path="/Accessibility" element={<Accessibility/>}/>
+            <Route path="/Cookie" element={<Cookie/>}/>
+            <Route path="/MentionLegale" element={<MentionLegale/>}/>
+            <Route path="/DonnePersonnelle" element={<DonnePersonnelle/>}/>
+            <Route path="/Search" element={<SearchArti/>}/>
+            <Route path="*" element={<Error404/>}/>
+          </Routes>
+        </main>
       <Footer/>
     </div>
   );
